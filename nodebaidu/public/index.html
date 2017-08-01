@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>百度手机</title>
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <link href="./css/reset.css" rel="stylesheet" type="text/css">
+    <link href="./css/baidu.css" rel="stylesheet" type="text/css">
+    <!--<link rel="stylesheet" type="text/css" href="./css/iconfont.css">-->
+</head>
+<body>
+<div class="container">
+    <header class="cf">
+        <a href="#" class="icon-baidu"></a>
+        <a href="#" class="icon-user"></a>
+        <a href="#" class="icon-add"></a>
+        <a href="#" class="icon-search"></a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">精选</a><i></i></li>
+            <li><a href="#">百家</a><i></i></li>
+            <li><a href="#">本地</a><i></i></li>
+            <li><a href="#">图片</a><i></i></li>
+            <li><a href="#">娱乐</a><i></i></li>
+            <li><a href="#">社会</a><i></i></li>
+            <li><a href="#">军事</a><i></i></li>
+            <li><a href="#">女人</a><i></i></li>
+            <li><a href="#">搞笑</a><i></i></li>
+            <li><a href="#">互联网</a><i></i></li>
+            <li><a href="#">更多</a><i></i></li>
+        </ul>
+
+    </nav>
+    <article class="news-main">
+        <ul class="news-lists">
+            <!--这里自动添加新闻-->
+            <!--<li class="news-list">-->
+                <!--<div class="newsimg">-->
+                    <!--<img src="./img/1.jpeg" alt="图片">-->
+                <!--</div>-->
+                <!--<div class="newscontent">-->
+                    <!--<h1>我是标题,我是标题我是标题,我是标题我是标题,我是标题我是标题</h1>-->
+                    <!--<p>-->
+                        <!--<span class="newstime">2017年6月29日</span>-->
+                        <!--<span class="newssrc">极客财经</span>-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</li>-->
+        </ul>
+    </article>
+
+</div>
+
+
+<!--设置导航栏-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        var deviceWidth = $("body").width();
+        $('nav li').each(function (index,item) {
+            if ($(this).find('a').html().split('').length >2){
+                $(this).width(deviceWidth/3)
+            } else {
+                $(this).width(deviceWidth/6)
+            }
+        })
+
+    })
+</script>
+
+<script type="text/javascript" src="js/moment.js"></script>
+<script src="js/baiduNews.js" type="text/javascript"></script>
+
+
+</body>
+</html>
